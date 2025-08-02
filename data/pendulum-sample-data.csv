@@ -1,0 +1,8 @@
+Trial,Length (m),Time for 10 oscillations (s),Period (s),Period² (s²),Notes
+1,0.25,10.0,1.000,1.000,Small amplitude (< 15°)
+2,0.35,11.9,1.190,1.416,Consistent timing
+3,0.45,13.5,1.350,1.823,Multiple trials averaged
+4,0.55,14.9,1.490,2.220,Good data quality
+5,0.65,16.2,1.620,2.624,Standard deviation < 0.1s
+6,0.75,17.4,1.740,3.028,Final measurement
+7,0.85,18.5,1.850,3.423,Longest pendulum tested 

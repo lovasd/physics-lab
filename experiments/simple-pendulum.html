@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Pendulum Experiment - Physics Lab</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/experiment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <i class="fas fa-atom"></i>
+                    <span>Physics Lab</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#experiments" class="nav-link">Experiments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#data" class="nav-link">Data</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#analysis" class="nav-link">Analysis</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#about" class="nav-link">About</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Experiment Header -->
+    <section class="experiment-header">
+        <div class="container">
+            <div class="experiment-intro">
+                <div class="experiment-icon-large">
+                    <i class="fas fa-weight-hanging"></i>
+                </div>
+                <div class="experiment-info">
+                    <h1>Simple Pendulum Experiment</h1>
+                    <p class="experiment-subtitle">Investigating the relationship between period and length of a simple pendulum</p>
+                    <div class="experiment-meta">
+                        <span class="meta-item"><i class="fas fa-clock"></i> Duration: 45 minutes</span>
+                        <span class="meta-item"><i class="fas fa-user-graduate"></i> Level: Undergraduate</span>
+                        <span class="meta-item"><i class="fas fa-flask"></i> Category: Mechanics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiment Navigation -->
+    <section class="experiment-nav">
+        <div class="container">
+            <ul class="exp-nav-menu">
+                <li><a href="#overview" class="exp-nav-link active">Overview</a></li>
+                <li><a href="#theory" class="exp-nav-link">Theory</a></li>
+                <li><a href="#equipment" class="exp-nav-link">Equipment</a></li>
+                <li><a href="#procedure" class="exp-nav-link">Procedure</a></li>
+                <li><a href="#data-collection" class="exp-nav-link">Data Collection</a></li>
+                <li><a href="#analysis" class="exp-nav-link">Analysis</a></li>
+                <li><a href="#results" class="exp-nav-link">Results</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="experiment-section">
+        <div class="container">
+            <h2>Experiment Overview</h2>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>The simple pendulum experiment is a fundamental investigation in classical mechanics that explores the relationship between the period of oscillation and the length of a pendulum. This experiment demonstrates the principles of harmonic motion and provides hands-on experience with data collection and analysis.</p>
+                    
+                    <h3>Learning Objectives</h3>
+                    <ul class="objectives-list">
+                        <li>Understand the relationship between pendulum length and period</li>
+                        <li>Verify the theoretical formula T = 2π√(L/g)</li>
+                        <li>Practice precise measurement techniques</li>
+                        <li>Analyze experimental data and calculate uncertainties</li>
+                        <li>Determine the local gravitational acceleration</li>
+                    </ul>
+
+                    <h3>Key Concepts</h3>
+                    <div class="concepts-grid">
+                        <div class="concept-card">
+                            <h4>Simple Harmonic Motion</h4>
+                            <p>Periodic motion where the restoring force is proportional to displacement</p>
+                        </div>
+                        <div class="concept-card">
+                            <h4>Period</h4>
+                            <p>Time for one complete oscillation cycle</p>
+                        </div>
+                        <div class="concept-card">
+                            <h4>Gravitational Acceleration</h4>
+                            <p>Acceleration due to gravity (g ≈ 9.81 m/s²)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-visual">
+                    <div class="pendulum-animation">
+                        <div class="pendulum-string"></div>
+                        <div class="pendulum-bob"></div>
+                        <div class="pendulum-path"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theory Section -->
+    <section id="theory" class="experiment-section section-alt">
+        <div class="container">
+            <h2>Theoretical Background</h2>
+            <div class="theory-content">
+                <div class="theory-text">
+                    <h3>The Simple Pendulum Equation</h3>
+                    <p>For a simple pendulum with small amplitude oscillations (θ < 15°), the period T is given by:</p>
+                    
+                    <div class="equation-box">
+                        <p class="equation">T = 2π√(L/g)</p>
+                        <p class="equation-note">where:</p>
+                        <ul class="equation-vars">
+                            <li>T = Period of oscillation (seconds)</li>
+                            <li>L = Length of pendulum (meters)</li>
+                            <li>g = Gravitational acceleration (m/s²)</li>
+                            <li>π = Pi (≈ 3.14159)</li>
+                        </ul>
+                    </div>
+
+                    <h3>Key Assumptions</h3>
+                    <ul class="assumptions-list">
+                        <li>Small amplitude oscillations (θ < 15°)</li>
+                        <li>Point mass bob (negligible size)</li>
+                        <li>Massless, inextensible string</li>
+                        <li>No air resistance or friction</li>
+                        <li>Constant gravitational field</li>
+                    </ul>
+
+                    <h3>Expected Results</h3>
+                    <p>According to the theory, the period should be:</p>
+                    <ul>
+                        <li>Independent of the mass of the bob</li>
+                        <li>Independent of the amplitude (for small angles)</li>
+                        <li>Proportional to the square root of the length</li>
+                        <li>Inversely proportional to the square root of g</li>
+                    </ul>
+                </div>
+                <div class="theory-visual">
+                    <div class="pendulum-diagram">
+                        <svg width="300" height="300" viewBox="0 0 300 300">
+                            <!-- Pendulum string -->
+                            <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+                            <!-- Pendulum bob -->
+                            <circle cx="150" cy="200" r="20" fill="#3b82f6"/>
+                            <!-- Support point -->
+                            <circle cx="150" cy="50" r="5" fill="#333"/>
+                            <!-- Angle arc -->
+                            <path d="M 150 50 A 30 30 0 0 1 180 80" stroke="#e74c3c" stroke-width="2" fill="none"/>
+                            <!-- Labels -->
+                            <text x="160" y="70" fill="#333" font-size="12">θ</text>
+                            <text x="140" y="125" fill="#333" font-size="12">L</text>
+                            <text x="170" y="200" fill="#333" font-size="12">m</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section id="equipment" class="experiment-section">
+        <div class="container">
+            <h2>Required Equipment</h2>
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <div class="equipment-icon">
+                        <i class="fas fa-weight-hanging"></i>
+                    </div>
+                    <h3>Pendulum Setup</h3>
+                    <ul>
+                        <li>String or thread (1-2 meters)</li>
+                        <li>Mass bob (50-200g)</li>
+                        <li>Support stand with clamp</li>
+                        <li>Protractor for angle measurement</li>
+                    </ul>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-icon">
+                        <i class="fas fa-ruler"></i>
+                    </div>
+                    <h3>Measurement Tools</h3>
+                    <ul>
+                        <li>Meter stick or tape measure</li>
+                        <li>Digital stopwatch</li>
+                        <li>Vernier calipers (optional)</li>
+                        <li>Digital scale (optional)</li>
+                    </ul>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-icon">
+                        <i class="fas fa-clipboard"></i>
+                    </div>
+                    <h3>Recording Materials</h3>
+                    <ul>
+                        <li>Data table template</li>
+                        <li>Graph paper or computer</li>
+                        <li>Calculator</li>
+                        <li>Lab notebook</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Procedure Section -->
+    <section id="procedure" class="experiment-section section-alt">
+        <div class="container">
+            <h2>Experimental Procedure</h2>
+            <div class="procedure-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Setup the Pendulum</h3>
+                        <p>Attach the string to the support stand and suspend the mass bob. Ensure the setup is stable and the string is taut.</p>
+                        <div class="step-tips">
+                            <strong>Tips:</strong>
+                            <ul>
+                                <li>Use a secure knot or clamp for the string</li>
+                                <li>Ensure the bob hangs freely without touching anything</li>
+                                <li>Keep the setup away from air currents</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Measure the Length</h3>
+                        <p>Measure the length L from the support point to the center of the bob. Record this measurement.</p>
+                        <div class="step-tips">
+                            <strong>Tips:</strong>
+                            <ul>
+                                <li>Measure from the pivot point to the center of mass</li>
+                                <li>Use a meter stick for precise measurements</li>
+                                <li>Record length in meters with appropriate precision</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Set Initial Amplitude</h3>
+                        <p>Displace the pendulum to a small angle (θ < 15°) and release it. Allow it to oscillate freely.</p>
+                        <div class="step-tips">
+                            <strong>Tips:</strong>
+                            <ul>
+                                <li>Use a protractor to measure the angle</li>
+                                <li>Keep amplitude small for accurate results</li>
+                                <li>Release gently to avoid initial velocity</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Measure the Period</h3>
+                        <p>Use a stopwatch to measure the time for 10 complete oscillations. Divide by 10 to get the period.</p>
+                        <div class="step-tips">
+                            <strong>Tips:</strong>
+                            <ul>
+                                <li>Start timing after the first oscillation</li>
+                                <li>Count complete back-and-forth cycles</li>
+                                <li>Repeat measurements for better accuracy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Vary the Length</h3>
+                        <p>Repeat the experiment with different pendulum lengths. Collect data for at least 5 different lengths.</p>
+                        <div class="step-tips">
+                            <strong>Tips:</strong>
+                            <ul>
+                                <li>Use lengths ranging from 0.2m to 1.0m</li>
+                                <li>Keep the same bob and amplitude</li>
+                                <li>Record all measurements carefully</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Collection Section -->
+    <section id="data-collection" class="experiment-section">
+        <div class="container">
+            <h2>Data Collection</h2>
+            <div class="data-content">
+                <div class="data-table-container">
+                    <h3>Sample Data Table</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Trial</th>
+                                <th>Length (m)</th>
+                                <th>Time for 10 oscillations (s)</th>
+                                <th>Period (s)</th>
+                                <th>Period² (s²)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dataTableBody">
+                            <!-- Data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                    <button class="btn btn-primary" onclick="addDataRow()">Add Data Point</button>
+                    <button class="btn btn-secondary" onclick="loadSampleData()">Load Sample Data</button>
+                </div>
+                <div class="data-visualization">
+                    <h3>Real-time Plot</h3>
+                    <canvas id="pendulumChart" width="400" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section id="analysis" class="experiment-section section-alt">
+        <div class="container">
+            <h2>Data Analysis</h2>
+            <div class="analysis-content">
+                <div class="analysis-tools">
+                    <h3>Analysis Tools</h3>
+                    <div class="tool-card">
+                        <h4>Calculate g from Period</h4>
+                        <div class="input-group">
+                            <label for="lengthInput">Length (m):</label>
+                            <input type="number" id="lengthInput" step="0.01" placeholder="Enter length">
+                        </div>
+                        <div class="input-group">
+                            <label for="periodInput">Period (s):</label>
+                            <input type="number" id="periodInput" step="0.01" placeholder="Enter period">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculateG()">Calculate g</button>
+                        <div id="gResult" class="result-display"></div>
+                    </div>
+
+                    <div class="tool-card">
+                        <h4>Linear Regression</h4>
+                        <p>Plot T² vs L to find the slope and calculate g:</p>
+                        <div class="regression-results">
+                            <div class="result-item">
+                                <span class="label">Slope:</span>
+                                <span id="slopeResult">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="label">Calculated g:</span>
+                                <span id="gFromSlope">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="label">R²:</span>
+                                <span id="rSquared">-</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="performRegression()">Perform Regression</button>
+                    </div>
+                </div>
+                <div class="analysis-explanation">
+                    <h3>Analysis Methods</h3>
+                    <div class="method-card">
+                        <h4>Method 1: Direct Calculation</h4>
+                        <p>Use the formula g = 4π²L/T² to calculate g for each data point, then take the average.</p>
+                    </div>
+                    <div class="method-card">
+                        <h4>Method 2: Linear Regression</h4>
+                        <p>Plot T² vs L. The slope should be 4π²/g, so g = 4π²/slope. This method is more accurate.</p>
+                    </div>
+                    <div class="method-card">
+                        <h4>Uncertainty Analysis</h4>
+                        <p>Calculate uncertainties in length and time measurements, then propagate to find uncertainty in g.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="experiment-section">
+        <div class="container">
+            <h2>Expected Results</h2>
+            <div class="results-content">
+                <div class="results-summary">
+                    <h3>Typical Results</h3>
+                    <div class="result-cards">
+                        <div class="result-card">
+                            <h4>Calculated g</h4>
+                            <div class="result-value">9.81 ± 0.05 m/s²</div>
+                            <p>Should be close to the accepted value of 9.81 m/s²</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>R² Value</h4>
+                            <div class="result-value">> 0.99</div>
+                            <p>Indicates excellent linear relationship</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Percent Error</h4>
+                            <div class="result-value">< 2%</div>
+                            <p>Good experimental accuracy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="results-discussion">
+                    <h3>Discussion Points</h3>
+                    <ul class="discussion-points">
+                        <li><strong>Sources of Error:</strong> Air resistance, string stretch, timing errors, amplitude effects</li>
+                        <li><strong>Improvements:</strong> Use longer strings, smaller amplitudes, multiple trials</li>
+                        <li><strong>Extensions:</strong> Investigate amplitude dependence, mass dependence, compound pendulums</li>
+                        <li><strong>Applications:</strong> Clocks, seismometers, gravity measurements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Physics Lab</h3>
+                    <p>Exploring the fundamental laws of nature through experimental science.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html#experiments">Experiments</a></li>
+                        <li><a href="../index.html#data">Data</a></li>
+                        <li><a href="../index.html#analysis">Analysis</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>For questions about experiments or data analysis.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Physics Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/pendulum-experiment.js"></script>
+</body>
+</html> 
